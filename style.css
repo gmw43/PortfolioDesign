@@ -1,27 +1,28 @@
-body{
+/*----------- body css ----------- */
+body {
     background-color: #191919;
     color: white;
-   
+    font-size: 100%
 }
+
+/*----------- start Navbar css  ----------- */
 
 .nav-item {
     color: var(--light-Content, #A7A7A7);
     text-align: center;
-
-    /* Buttons / Big */
     font-family: DM Sans;
     font-size: 20px;
     font-style: normal;
     font-weight: 500;
     line-height: 26px;
-    /* 130% */
     margin: 0 5px;
 }
+
 .navbar-inner {
-    background:transparent;
+    background: transparent;
 }
 
-/* header css */
+/*----------- start Header css ----------- */
 
 
 header {
@@ -36,8 +37,12 @@ header {
     align-items: center;
     flex-direction: row;
 }
-.banner h2{
-    font-size: 3rem;
+
+.banner h2 {
+    /* font-size: calc(20px (35 - 20) * (100vw - 320px) / (1920 - 320)); */
+    /* font-size: 3em; */
+    font-size: calc(4vw + 2px);
+
 }
 
 .banner span {
@@ -55,10 +60,434 @@ header {
     padding: 5px;
     display: inline-block;
     border-radius: 50%;
+
 }
+
 .banner-img img {
     width: 250px;
     height: 250px;
+    /* vertical-align: middle;  */
     border-radius: 50%;
-    vertical-align: middle;
+
+    max-width: 100%;
+    height: auto;
+    display: block;
+    /* Removes extra space beneath the image */
+    margin: auto;
+    /* Centers the image within its container */
+
+}
+
+/*----------- start Tech Section css ----------- */
+section {
+    margin-top: 13rem;
+}
+
+.MyTechStack {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.MyTechStackIcons {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    margin: 2rem 0;
+}
+
+.MyTechStackIcons img {
+    width: 100px;
+    height: 100px;
+    flex-shrink: 0;
+}
+
+.heading {
+    text-align: center;
+}
+
+.heading h3 {
+    font-size: calc(3vw + 2px);
+    font-weight: bold;
+}
+
+.heading p {
+    margin-bottom: 2rem;
+    font-size: calc(2vw + 2px);
+}
+
+
+/*----------- start Card's Section css ----------- */
+
+.project {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+
+}
+
+.card {
+    width: calc(33% - 30px);
+    margin: 0 15px;
+    margin-bottom: 2rem;
+    border-radius: 30px;
+    border: none;
+}
+
+.card img {
+    /* width: 375px; */
+    object-fit: cover;
+    height: 260px;
+    flex-shrink: 0;
+    border-radius: unset;
+    border-top-right-radius: 20px;
+    border-top-left-radius: 20px;
+
+}
+
+.card-body {
+    background: #363636;
+    border-bottom-left-radius: 20px;
+    border-bottom-right-radius: 20px;
+}
+
+.card-body h5 {
+    /* font-size: calc(20px (35 - 20) * (100vw - 320px) / (1920 - 320)); */
+    font-size: calc(2vw + 2px);
+}
+
+.card-body p {
+    font-size: calc(1vw + 2px);
+}
+
+.card-link {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.card-link a {
+    text-decoration: none;
+    color: white;
+    font-size: calc(1vw + 2px);
+}
+
+/*----------- start Footer css ----------- */
+
+/* footer p,
+li,
+li a {
+    font-size: calc(20px (35 - 20) * (100vw - 320px) / (1920 - 320));
+    font-size: calc(1vw + 5px);
+
+} */
+footer {
+    margin-top: 13rem;
+}
+
+.footerTop {
+    display: flex;
+    margin-top: 13rem;
+    justify-content: space-between;
+}
+
+.footerImg img {
+    width: 96px;
+    height: 55px;
+}
+
+.footerBody {
+    display: flex;
+    flex-wrap: wrap;
+    /* justify-content: space-around; */
+    line-height: 60px;
+
+
+}
+
+.footerLink {
+    margin-right: 2rem;
+}
+
+.footerLink li {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: center;
+    list-style: none;
+    float: left;
+    margin: 0 1rem;
+    font-size: calc(1vw + 2px);
+}
+
+.footerIcon img {
+    margin-left: 3px;
+}
+
+/*----------- footer horizontal line css ----------- */
+
+hr {
+    stroke-width: 2px;
+    stroke: var(--Solid-Heading, #42446E);
+    opacity: 0.3;
+}
+
+/*----------- start footer's bottom part css ----------- */
+
+.footerBottom {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    justify-content: space-between;
+}
+
+.footerNav ul {
+    margin: 0;
+    padding: 0;
+}
+
+.footerNav ul li {
+    list-style: none;
+    float: left;
+}
+
+.footerNav ul li a {
+    font-size: calc(1vw + 2px);
+    text-decoration: none;
+    color: white;
+    margin-right: 1rem;
+}
+
+.footerBottom p {
+    font-size: calc(1vw + 2px);
+}
+
+/*---------------------- start Media query css ---------------------- */
+@media (max-width:991px) {
+
+    /*-----------MQ header ----------- */
+    .banner-img img {
+        width: 200px;
+        height: 200px;
+    }
+
+    header {
+        margin-top: 13rem;
+    }
+
+    .MyTechStackIcons img{
+        width: 80px;
+        height: 80px;
+    }
+
+    /*-----------MQ  footer section----------- */
+
+    .footerBottom {
+        justify-content: center;
+    }
+
+    .footerNav {
+        width: 100%;
+        margin-bottom: 1rem;
+    }
+
+    .footerNav ul {
+        display: flex;
+        justify-content: space-around;
+    }
+
+
+
+
+
+}
+
+/*-----------767----------- */
+
+@media (max-width:767px) {
+
+    /*-----------MQ header ----------- */
+    .heading h3 {
+        font-size: calc(5vw + 2px);
+        font-weight: bold;
+    }
+
+    .heading p {
+        margin-bottom: 2rem;
+        font-size: calc(2vw + 2px);
+    }
+
+
+    /*-----------MQ  footer section----------- */
+    .banner-img img {
+        width: 150px;
+        height: 150px;
+    }
+
+    /*-----------MQ  Card section----------- */
+    .project {
+        margin: 2rem 0;
+    }
+
+    .project .card {
+        width: 100%;
+        margin: 0;
+        margin-top: 1rem;
+    }
+
+    .card img {
+        height: 200px;
+    }
+
+    .card-body h5 {
+        font-size: calc(3vw + 2px);
+    }
+    
+    .card-body p {
+        font-size: calc(2vw + 2px);
+    }
+
+    .card-link a {
+        font-size: calc(2vw + 2px);
+    }
+
+
+
+    /*-----------MQ  footer section----------- */
+
+    .footerTop {
+        flex-direction: column;
+    }
+
+    .footerImg {
+        text-align: center;
+    }
+
+    .footerBody {
+        justify-content: space-between;
+    }
+
+    .footerLink {
+        margin-right: 0;
+
+    }
+
+    .footerLink li {
+        font-size: calc(2vw + 2px);
+    }
+
+    .footerNav ul li a {
+        font-size: calc(2vw + 2px);
+    }
+
+    .footerBottom p {
+        font-size: calc(2vw + 2px);
+    }
+
+}
+
+@media (max-width:578px) {
+
+    /*-----------MQ header ----------- */
+    .banner-img img {
+        width: 100px;
+        height: 100px;
+    }
+
+    /* .MyTechStackIcons img{
+        width: 50px;
+        height: 50px;
+    } */
+
+}
+
+@media (max-width:400px) {
+
+    /*-----------MQ header ----------- */
+    .banner {
+        flex-direction: column;
+        justify-content: center;
+    }
+
+    .banner-img img {
+        width: 150px;
+        height: 150px;
+    }
+
+    .banner h2 {
+        font-size: calc(7vw + 5px);
+        margin-bottom: 4rem;
+    }
+
+    section {
+        margin-top: 13rem;
+        /* Adjust as needed */
+    }
+
+    .card-body h5 {
+        font-size: calc(3vw + 3px);
+    }
+    
+    .card-body p {
+        font-size: calc(2vw + 3px);
+    }
+
+    
+
+}
+
+/* @media (max-width:428) {
+
+
+    .footerLink {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+    .footerLink a{
+        margin: 0;
+    }
+
+    .footerIcon {
+        width: 100%;
+        display: flex;
+        justify-content: center;
+        margin: 0;
+    }
+
+} */
+
+@media (max-width:318px) {
+
+    .banner-img img {
+        width: 100px;
+        height: 100px;
+    }
+
+    .heading h3 {
+        font-size: calc(6vw + 2px);
+        font-weight: bold;
+    }
+
+    .heading p {
+        margin-bottom: 2rem;
+        font-size: calc(3vw + 2px);
+    }
+
+
+    /*-----------MQ  footer section----------- */
+    .footerBody {
+        display: flex;
+        flex-direction: column;
+    }
+
+    .footerLink {
+        display: flex;
+        justify-content: center
+    }
+
+    .footerIcon {
+        display: flex;
+        justify-content: center
+    }
 }
